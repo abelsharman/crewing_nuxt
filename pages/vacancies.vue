@@ -380,6 +380,7 @@ export default {
         .post("https://periodicals.abelsharman.kz/upload", formData)
         .then(res => {
           console.log(res);
+          alert("Отправлено")
         })
         .catch(err => {
           console.log(err);

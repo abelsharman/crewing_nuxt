@@ -2,7 +2,7 @@
   <v-overlay :value="loading"  :opacity="1" class="" style="position:relative;z-index:1000;">
     <div :style="{background: getBackground}" style="width: 100vw; height: 100vh; padding-top: 40vh;position:relative;z-index:1000;">
         <div class="my-loading d-flex flex-column justify-center align-center">
-        <img src="../assets/loading.png" alt="">
+        <img class="loading_img" src="../assets/loading.png" alt="">
         <p class="mt-4 text-center">
             Загрузка...
         </p>
@@ -73,5 +73,16 @@ export default {
     line-height: 30px;
 
     color: #FFFFFF;
+}
+
+@media screen and (max-width: 480px){
+  .loading_img{
+    width: 40vw;
+  }
+}
+@media screen and (min-width: 480px){
+  .loading_img{
+    width: 12vw;
+  }
 }
 </style>

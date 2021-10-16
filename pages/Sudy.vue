@@ -2,29 +2,29 @@
     <div class="sudy">
         <Header :isMain="isMain" v-if="!loading" />
         <Loading :loading="loading"/>
-        <div class="sudy_list">
+        <!-- <div class="sudy_list">
             <h1 style="font-weight: 900 !important">Виды судов.</h1>
             <div>
                 <img src="../assets/kar4.png" alt="">
                 <div style="background: #C4C4C4;height:3px;width:8vw;display:inline-block;position:relative;top:-20px;"></div>
-                <p>Судно-контейнеровоз</p>
+                <p>Сухогрузы</p>
             </div>
             <div>
-                <p style="border-radius: 0px 20px;">Плавучая гостиница</p>
+                <p style="border-radius: 0px 20px;">Плавучие гостиницы</p>
                 <div style="background: #C4C4C4;height:3px;width:8vw;display:inline-block;position:relative;top:-20px;"></div>
                 <img src="../assets/kar2.png" alt="">
             </div>
             <div>
                 <img src="../assets/kar1.png" alt="">
                 <div style="background: #C4C4C4;height:3px;width:8vw;display:inline-block;position:relative;top:-20px;"></div>
-                <p>Нефтеналивной танкер</p>
+                <p>Танкера</p>
             </div>
             <div>
-                <p style="border-radius: 0px 20px;">Судно для перевозки модулей</p>
+                <p style="border-radius: 0px 20px;">Специализированный флот</p>
                 <div style="background: #C4C4C4;height:3px;width:8vw;display:inline-block;position:relative;top:-20px;"></div>
                 <img src="../assets/kar3.png" alt="">
             </div>
-        </div>
+        </div> -->
 
         <div class="sudy_list_mobile">
             <h1>Виды судов.</h1>
@@ -37,19 +37,19 @@
                 <div class="sudy_list_mobile_item_img">
                     <img src="../assets/kar13.png" alt="">
                 </div>
-                <p class="sudy_list_mobile_p_1">Судно-контейнеровоз</p>
+                <p class="sudy_list_mobile_p_1">Сухогрузы</p>
             </div>
 
 
             <div class="sudy_list_mobile_item">
-                <div class="sudy_list_mobile_item_right" style="right: -2px;">
+                <div class="sudy_list_mobile_item_right">
                     <img src="../assets/loading.png" alt="">
                 </div>
 
                 <div class="sudy_list_mobile_item_img">
                     <img src="../assets/kar23.png" alt="">
                 </div>
-                <p class="sudy_list_mobile_p_2">Нефтеналивной танкер</p>
+                <p class="sudy_list_mobile_p_2">Танкера</p>
             </div>
 
 
@@ -62,7 +62,7 @@
                 <div class="sudy_list_mobile_item_img">
                     <img src="../assets/kar33.png" alt="">
                 </div>
-                <p class="sudy_list_mobile_p_1">Судно-буксир</p>
+                <p class="sudy_list_mobile_p_1">Буксиры</p>
             </div>
 
 
@@ -76,7 +76,7 @@
                 <div class="sudy_list_mobile_item_img">
                     <img src="../assets/kar43.png" alt="">
                 </div>
-                <p class="sudy_list_mobile_p_2">Судно для перевозки модулей</p>
+                <p class="sudy_list_mobile_p_2">Специализированный флот</p>
             </div>
 
 
@@ -89,7 +89,7 @@
                 <div class="sudy_list_mobile_item_img">
                     <img src="../assets/kar53.png" alt="">
                 </div>
-                <p class="sudy_list_mobile_p_1">Плавучая гостиница</p>
+                <p class="sudy_list_mobile_p_1">Плавучие гостиницы</p>
             </div>
 
         </div>
@@ -354,8 +354,103 @@ export default {
 }
 
 @media screen and (min-width: 490px){
-    .feedback_mobile, .sudy_list_mobile{
+    .feedback_mobile{
         display: none;
+    }
+    .sudy_list_mobile{
+        display: block;
+        padding-top: 50px;
+        padding-left: 5vw;
+        h1{
+            font-style: normal;
+            font-weight: bold;
+            font-size: 4.4vw;
+            line-height: 88px;
+            color: #000000;
+            margin-top: 60px;
+            margin-bottom: 94px;
+        }
+        .sudy_list_mobile_item{
+            filter: drop-shadow(4px 8px 10px rgba(0, 0, 0, 0.5));
+            border-radius: 20px;
+            position: relative;
+            width: 89vw;
+            margin-top: 6vw;
+            margin-bottom: 6vw;
+            height: 29vw;
+            padding-left: 8vw;
+            .sudy_list_mobile_item_img{
+                border-radius: 20px;
+                img{
+                    width: 72.8vw;
+                    border-radius: 20px;
+                    height: 32.6vw;
+                    object-fit: cover;
+                }
+            }
+            .sudy_list_mobile_item_left{
+                background: linear-gradient(264.1deg, #063661 0%, #078FD3 99.34%);
+                border-radius: 20px 0px 0px 20px;
+                position: absolute;
+                left: 8vw;
+                top: 0.4vw;
+                height: 27.8vw;
+                width: 12vw;
+                img{
+                    width: 8.5vw;
+                    margin-top: 10vw;
+                    margin-left: 1.6vw;
+                }
+            }
+            .sudy_list_mobile_item_right{
+                background: linear-gradient(264.1deg, #063661 0%, #078FD3 99.34%);
+                border-radius: 0px 20px 20px 0px;
+                position: absolute;
+                right: 8vw;
+                top: 0.4vw;
+                height: 27.8vw;
+                width: 12vw;
+                img{
+                    width: 8.5vw;
+                    margin-top: 10vw;
+                    margin-left: 1.6vw;
+                }
+            }
+            .sudy_list_mobile_p_1{
+                font-style: 300;
+                font-weight: normal;
+                font-size: 3.2vw;
+                line-height: 6.2vw;
+                text-align: center;
+                color: #FFFFFF;
+                width: max-content;
+                position: absolute;
+                bottom: 0.8vw;
+                font-family: "Montserrat", sans-serif;
+                right: 8.2vw;
+                margin: 0;
+                padding: 0 4vw;
+                background: #0773D3;
+                border-radius: 20px 0px;
+            }
+            .sudy_list_mobile_p_2{
+                top: 0px;
+                left: 7.8vw;
+                font-style: 300;
+                font-weight: normal;
+                font-size: 3.2vw;
+                line-height: 6.2vw;
+                font-family: "Montserrat", sans-serif;
+                text-align: center;
+                color: #FFFFFF;
+                width: max-content;
+                position: absolute;
+                margin: 0;
+                padding: 0 4vw;
+                background: #0773D3;
+                border-radius: 20px 0px;
+            }
+        }
     }
     .sudy_list{
     margin-left: 15vw;

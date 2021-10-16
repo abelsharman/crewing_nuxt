@@ -8,7 +8,10 @@
         Тег video не поддерживается вашим браузером. 
       </video>
 
-      <img class="home_main_img" id="home_main_img" src="../assets/image33.png" alt="">
+      <picture>
+        <source srcset="../assets/image33.webp" type="image/webp">
+        <img class="home_main_img" id="home_main_img" src="../assets/image33.png" alt="">
+      </picture>
 
       <p id="p1" v-scroll-to="{el: '#about',  offset: -100,}" class="home_1">a</p>
       <a href="/vacancies" class="home_2">a</a>
@@ -17,10 +20,10 @@
       <p v-scroll-to="{el: '#header',  offset: -100,}" class="home_5">a</p>
       <p v-scroll-to="{el: '#education',  offset: -100,}" class="home_6">a</p>
       <p v-scroll-to="{el: '#cert',  offset: -100,}" class="home_7">a</p>
-      <p v-scroll-to="{el: '#cert',  offset: -100,}" class="home_8">a</p>
+      <a href="/Sudy" class="home_8">a</a>
     </div>
     <div class="home_mobile">
-      <p>ТРУДОУСТРОЙСТВО КАЗАХСТАНСКИХ МОРЯКОВ</p>
+      <p style="text-transform:uppercase">Трудоустройство морского персонала</p>
       <v-btn
         depressed
         color="primary"
@@ -40,14 +43,17 @@
       </div>
       <div class="about_text">
         <div class="about_text_1">
-          <p>Качественное трудоустройство моряков на суда торгового флота</p>
-          <img src="../assets/image2.png" alt="">
-          <strong>„Памятник «Каравелла Колумба Санта-Мария», Актау“</strong>
+          <p>{{ about_3 }}</p>
+          <picture>
+            <source srcset="../assets/image2.webp" type="image/webp">
+            <img src="../assets/image2.png" alt="">
+          </picture>
+          <strong>{{ about_4 }}</strong>
           <!-- <h2>Павел Нахимов</h2> -->
         </div>
         <div class="about_text_2">
-          <p>Мы занимаемся крюинговой деятельностью, помогая морякам устраиваться на морские суда. Первостепенная задача нашей компании - обеспечить полный цикл необходимых инициатив для успешного трудоустройства наших клиентов. Так, мы проводим обязательное обучение, оказываем консультации, координируем клиента и сопровождаем его на протяжении всего срока сбора документов.</p>
-          <p>Мы ценим ваше время. Опытные специалисты нашей компании предпримут для вас все нужные шаги для получения достойной вакансии.</p>
+          <p>{{ about_1 }}</p>
+          <p>{{ about_2 }}</p>
         </div>
       </div>
     </div>
@@ -57,9 +63,12 @@
       <img src="../assets/hat.png" alt="">
 
       <div class="about_mobile_info">
-        <img src="../assets/image2.png" alt="">
-        <p style="margin-top: 6vw;">Мы занимаемся крюинговой деятельностью, помогая морякам устраиваться на морские суда. Первостепенная задача нашей компании - обеспечить полный цикл необходимых инициатив для успешного трудоустройства наших клиентов. Так, мы проводим обязательное обучение, оказываем консультации, координируем клиента и сопровождаем его на протяжении всего срока сбора документов.</p>
-        <p style="margin-top: 0px;">Мы ценим ваше время. Опытные специалисты нашей компании предпримут для вас все нужные шаги для получения достойной вакансии.</p>
+        <picture>
+            <source srcset="../assets/image2.webp" type="image/webp">
+            <img src="../assets/image2.png" alt="">
+          </picture>
+        <p>{{ about_1 }}</p>
+          <p>{{ about_2 }}</p>
       </div>
     </div>
 
@@ -67,12 +76,17 @@
 
     <div class="education" id="education">
       <div class="education_info">
-        <div class="education_info_img"><img src="../assets/wheel.png" alt=""></div>
+        <div class="education_info_img">  
+          <picture>
+            <source srcset="../assets/wheel.webp" type="image/webp">
+            <img src="../assets/wheel.png" alt="">
+          </picture>
+        </div>
          <div style="width: 95px;height: 4px;background: #01DFFD;"></div>
          <h1 style="font-weight: 900 !important">Обучение.</h1>
          <div class="education_info_text">
-           <p>Одним из ключевых преимуществ работы с нашей компанией является качественное обучение. Перед приемом на работу вы сможете успешно завершить несколько курсов подготовки, улучшив собственные знания и навыки.</p>
-           <p style="margin-bottom: 38px;">Для ознакомления с текущим списком активных курсов свяжитесь с нами по телефону: наш HR-менеджер с удовольствием проконсультирует вас по вопросам обучения.</p>
+           <p>{{ education_1 }}</p>
+           <p style="margin-bottom: 38px;">{{ education_2 }}</p>
             <!-- <v-btn
             depressed
             color="primary"
@@ -90,11 +104,14 @@
 
     <div class="education_mobile">
       <h1>Обучение.</h1>
-      <img class="education_mobile_img" src="../assets/wheel.png" alt="">
+      <picture>
+            <source srcset="../assets/wheel.webp" type="image/webp">
+            <img class="education_mobile_img" src="../assets/wheel.png" alt="">
+          </picture>
       <div class="education_mobile_info">
         <div class="education_mobile_info_1">
-          <p>Одним из ключевых преимуществ работы с нашей компанией является качественное обучение. Перед приемом на работу вы сможете успешно завершить несколько курсов подготовки, улучшив собственные знания и навыки.</p>
-          <p>Для ознакомления с текущим списком активных курсов свяжитесь с нами по телефону: наш HR-менеджер с удовольствием проконсультирует вас по вопросам обучения.</p>
+          <p>{{ education_1 }}</p>
+          <p>{{ education_2 }}</p>
         </div>
         <div class="education_mobile_info_2">
           <img src="../assets/image1.png" alt="">
@@ -102,7 +119,7 @@
       </div>
 
 
-      <a href="/vacancies"><v-btn color="primary" style="letter-spacing:0.01em;text-transform:initial;font-size:3.4vw;font-weight:bold;font-family: 'Montserrat', sans-serif;width:49vw;margin-left:20vw;margin-top:20px;">Начать обучение</v-btn></a>
+      <!-- <a href="/vacancies"><v-btn color="primary" style="letter-spacing:0.01em;text-transform:initial;font-size:3.4vw;font-weight:bold;font-family: 'Montserrat', sans-serif;width:49vw;margin-left:20vw;margin-top:20px;">Начать обучение</v-btn></a> -->
     </div>
 
     <div class="vac" id="vac">
@@ -208,28 +225,58 @@
 
     <div class="cert" id="cert">
       <h1 style="font-weight: 900 !important">Сертификаты.</h1>
-      <img class="cert_1" src="../assets/rock1.png" alt="">
-      <img class="cert_2" src="../assets/rock2.png" alt="">
-      <img class="cert_3" src="../assets/tower2.png" alt="">
+      <picture>
+        <source srcset="../assets/rock1.webp" type="image/webp">
+        <img class="cert_1" src="../assets/rock1.png" alt="">
+      </picture>
+      <picture>
+        <source srcset="../assets/rock2.webp" type="image/webp">
+        <img class="cert_2" src="../assets/rock2.png" alt="">
+      </picture>
+      <!-- <img class="cert_3" src="../assets/tower2.png" alt=""> -->
       <div class="cert_img">
         <div>
-          <img @click="changeImage($event.target)" src="../assets/slide1.png" alt="">
-          <img @click="changeAnotherImage($event.target)" style="left: 0vw;" class="cert_img_upd" src="../assets/slide1upd.png" alt="">
+          <picture>
+            <source srcset="../assets/slide1.webp" type="image/webp">  
+            <img @click="changeImage($event.target)" src="../assets/slide1.png" alt="">
+          </picture>
+          <picture>
+            <source srcset="../assets/slide1upd.webp" type="image/webp">
+            <img @click="changeAnotherImage($event.target)" style="left: 0vw;" class="cert_img_upd" src="../assets/slide1upd.png" alt="">
+          </picture>
         </div>
 
         <div>
-          <img @click="changeImage($event.target)" src="../assets/slide2.png" alt="">
-          <img @click="changeAnotherImage($event.target)" style="left: 0vw;" class="cert_img_upd" src="../assets/slide2upd.png" alt="">
+          <picture>
+            <source srcset="../assets/slide2.webp" type="image/webp">  
+            <img @click="changeImage($event.target)" src="../assets/slide2.png" alt="">
+          </picture>
+          <picture>
+            <source srcset="../assets/slide2upd.webp" type="image/webp">
+            <img @click="changeAnotherImage($event.target)" style="left: 0vw;" class="cert_img_upd" src="../assets/slide2upd.png" alt="">
+          </picture>
         </div>
 
         <div>
-          <img @click="changeImage($event.target)" src="../assets/slide3.png" alt="">
-          <img @click="changeAnotherImage($event.target)" style="left: 0vw;" class="cert_img_upd" src="../assets/slide3upd.png" alt="">
+          <picture>
+            <source srcset="../assets/slide3.webp" type="image/webp">  
+            <img @click="changeImage($event.target)" src="../assets/slide3.png" alt="">
+          </picture>
+          <picture>
+            <source srcset="../assets/slide3upd.webp" type="image/webp">
+            <img @click="changeAnotherImage($event.target)" style="left: 0vw;" class="cert_img_upd" src="../assets/slide3upd.png" alt="">
+          </picture>
         </div>
 
         <div>
-          <img @click="changeImage($event.target)" src="../assets/slide4.png" alt="">
-          <img @click="changeAnotherImage($event.target)" style="left: 0vw;" class="cert_img_upd" src="../assets/slide4upd.png" alt="">
+          <picture>
+            <source srcset="../assets/slide4.webp" type="image/webp">  
+            <img @click="changeImage($event.target)" src="../assets/slide4.png" alt="">
+          </picture>
+          <picture>
+            <source srcset="../assets/slide4upd.webp" type="image/webp">
+            <img @click="changeAnotherImage($event.target)" style="left: 0vw;" class="cert_img_upd" src="../assets/slide4upd.png" alt="">
+          </picture>
         </div>
       </div>
     </div>
@@ -238,23 +285,47 @@
       <h1>Сертификаты.</h1>
       <div class="cert_img">
         <div>
-          <img @click="changeImage($event.target)" src="../assets/slide1.png" alt="">
-          <img @click="changeAnotherImage($event.target)" style="left: 0vw;" class="cert_img_upd" src="../assets/slide1upd.png" alt="">
+          <picture>
+            <source srcset="../assets/slide1.webp" type="image/webp">  
+            <img @click="changeImage($event.target)" src="../assets/slide1.png" alt="">
+          </picture>
+          <picture>
+            <source srcset="../assets/slide1upd.webp" type="image/webp">
+            <img @click="changeAnotherImage($event.target)" style="left: 0vw;" class="cert_img_upd" src="../assets/slide1upd.png" alt="">
+          </picture>
         </div>
 
         <div>
-          <img @click="changeImage($event.target)" src="../assets/slide2.png" alt="">
-          <img @click="changeAnotherImage($event.target)" style="left: 78vw;" class="cert_img_upd" src="../assets/slide2upd.png" alt="">
+          <picture>
+            <source srcset="../assets/slide2.webp" type="image/webp">  
+            <img @click="changeImage($event.target)" src="../assets/slide2.png" alt="">
+          </picture>
+          <picture>
+            <source srcset="../assets/slide2upd.webp" type="image/webp">
+            <img @click="changeAnotherImage($event.target)" style="left: 78vw;" class="cert_img_upd" src="../assets/slide2upd.png" alt="">
+          </picture>
         </div>
 
         <div>
-          <img @click="changeImage($event.target)" src="../assets/slide3.png" alt="">
-          <img @click="changeAnotherImage($event.target)" style="left: 156vw;" class="cert_img_upd" src="../assets/slide3upd.png" alt="">
+          <picture>
+            <source srcset="../assets/slide3.webp" type="image/webp">  
+            <img @click="changeImage($event.target)" src="../assets/slide3.png" alt="">
+          </picture>
+          <picture>
+            <source srcset="../assets/slide3upd.webp" type="image/webp">
+            <img @click="changeAnotherImage($event.target)" style="left: 156vw;" class="cert_img_upd" src="../assets/slide3upd.png" alt="">
+          </picture>
         </div>
 
         <div>
-          <img @click="changeImage($event.target)" src="../assets/slide4.png" alt="">
-          <img @click="changeAnotherImage($event.target)" style="left: 234vw;" class="cert_img_upd" src="../assets/slide4upd.png" alt="">
+          <picture>
+            <source srcset="../assets/slide4.webp" type="image/webp">  
+            <img @click="changeImage($event.target)" src="../assets/slide4.png" alt="">
+          </picture>
+          <picture>
+            <source srcset="../assets/slide4upd.webp" type="image/webp">
+            <img @click="changeAnotherImage($event.target)" style="left: 234vw;" class="cert_img_upd" src="../assets/slide4upd.png" alt="">
+          </picture>
         </div>
       </div>
 
@@ -290,8 +361,8 @@
     <div class="count">
       <h1 v-if="!loading" style="font-weight: 900 !important">Мы в цифрах.</h1>
       <div class="count_numb" ref="count">
-        <span class="count_numb_1" id="a">5</span>
-        <span class="count_numb_2" id="b">119</span>
+        <span class="count_numb_1" id="a">{{ count_type }}</span>
+        <span class="count_numb_2" id="b">{{ people_count }}</span>
       </div>
       <div class="count_text">
         <span class="count_text_1">Видов судов</span>
@@ -299,23 +370,26 @@
       </div>
       <div style="background: #DEDEDE;height:6px;width:100vw;position:relative;top:20px;"></div>
 
-      <span class="count_know">Узнайте больше  о кораблях, на которые мы трудоустраиваем</span>
-      <a href="/sudy" style="opacity:1;"><v-btn depressed color="primary" style="position: relative;top:-15px;left:65vw;width:22vw;height:86px;letter-spacing:0.01em;text-transform:initial;font-size:2.5vw;font-weight:bold;font-family: 'Montserrat', sans-serif;">Подробнее</v-btn></a>
+      <span class="count_know">{{ nav_to_sudna }}</span>
+      <a href="/Sudy" style="opacity:1;"><v-btn depressed color="primary" style="position: relative;top:-15px;left:65vw;width:22vw;height:86px;letter-spacing:0.01em;text-transform:initial;font-size:2.5vw;font-weight:bold;font-family: 'Montserrat', sans-serif;">Подробнее</v-btn></a>
     </div>
 
     <div class="count_mobile">
       <h1 v-if="!loading">Мы в цифрах.</h1>
       <div class="count_mobile_1">
-        <span class="count_numb_1" id="c">5</span>
+        <span class="count_numb_1" id="c">{{ count_type }}</span>
         <p class="count_text_1" style="width:44vw;">Видов судов</p>
       </div>
       <img class="count_mobile_3" src="../assets/rock3.png" alt="">
-      <img class="count_mobile_4" src="../assets/rock2.png" alt="">
-      <span style="margin-top:6vw;display:inline-block" class="count_numb_2" id="d">119</span>
+      <picture>
+        <source srcset="../assets/rock2.webp" type="image/webp">
+        <img class="count_mobile_4" src="../assets/rock2.png" alt="">
+      </picture>
+      <span style="margin-top:6vw;display:inline-block" class="count_numb_2" id="d">{{ people_count }}</span>
       <p style="position:relative;top:-6vw;">Человек, штат компании</p>
 
       <div style="width: 100vw;height:2px;background: #DEDEDE;position:relative;left:-5vw;"></div>
-      <h2>Узнайте больше о кораблях на которые мы трудоустраиваем</h2>
+      <h2>{{ nav_to_sudna }}</h2>
       <a href="/Sudy"><v-btn color="primary" style="font-size:3.4vw;width:50vw;margin-left:20vw;margin-top:26px;margin-bottom:14vw;letter-spacing:0.01em;text-transform:initial;font-size:3.4vw;font-weight:bold;font-family: 'Montserrat', sans-serif;">Подробнее</v-btn></a>
     </div>
 
@@ -473,6 +547,15 @@ export default {
   name: 'Home',
   data(){
     return{
+      about_1: '',
+      about_2: '',
+      about_3: '',
+      about_4: '',
+      education_1: '',
+      education_2: '',
+      count_type: '',
+      people_count: '',
+      nav_to_sudna: '',
       name: '',
       example: '',
       popup: false, 
@@ -542,6 +625,7 @@ export default {
     }
   },
   mounted(){
+    this.getData()
     const firstScrollTo = scroller()
     if(this.query == 'about'){
       setTimeout(()=>{
@@ -578,13 +662,27 @@ export default {
     const obj2 = document.querySelector("#c")
     const obj3 = document.querySelector("#d")
     setInterval(()=>{
-        this.animateValue(obj, 0, 119, 5000);
-        this.animateValue(obj1, 0, 5, 5000);
-        this.animateValue(obj3, 0, 119, 5000);
-        this.animateValue(obj2, 0, 5, 5000);
+        this.animateValue(obj, 0, this.people_count, 5000);
+        this.animateValue(obj1, 0, this.count_type, 5000);
+        this.animateValue(obj3, 0, this.people_count, 5000);
+        this.animateValue(obj2, 0, this.count_type, 5000);
     },10000)
   },
   methods: {
+    getData(){
+            this.$axios.get("https://periodicals.abelsharman.kz/crewingData")
+            .then((res)=>{
+                this.about_1 = res.data[0].about_1
+                this.about_2 = res.data[0].about_2
+                this.about_3 = res.data[0].about_3
+                this.about_4 = res.data[0].about_4
+                this.education_1 = res.data[0].education_1
+                this.education_2 = res.data[0].education_2
+                this.count_type = res.data[0].count_type
+                this.people_count = res.data[0].people_count
+                this.nav_to_sudna = res.data[0].nav_to_sudna
+            })
+        },
     getVac(){
             this.$axios.get("https://periodicals.abelsharman.kz/crewings")
             .then((res)=>{
@@ -637,7 +735,7 @@ export default {
       let startTimestamp = null;
       const step = (timestamp) => {
         if (!startTimestamp) startTimestamp = timestamp;
-        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1) / 10;
         obj.innerHTML = Math.floor(progress * (end + start) + start);
         if (progress < 1) {
           window.requestAnimationFrame(step);
@@ -647,11 +745,11 @@ export default {
     },
     changeImage(event){
       event.style.transform = 'rotateY(90deg)'
-      event.parentNode.childNodes[2].style.transform = 'rotateY(0deg)'
+      event.parentNode.parentNode.childNodes[2].childNodes[2].style.transform = 'rotateY(0deg)'
     },
     changeAnotherImage(event){
       event.style.transform = 'rotateY(90deg)'
-      event.parentNode.childNodes[0].style.transform = 'rotateY(0deg)'
+      event.parentNode.parentNode.childNodes[0].childNodes[2].style.transform = 'rotateY(0deg)'
     }
   },
   components: {
@@ -733,7 +831,7 @@ export default {
       margin-left: 7.5vw;
       margin-top: 25px;
       z-index: 2;
-      height: 25vw;
+      height: 27vw;
       position: relative;
       .about_text_1{
         display: inline-block;
@@ -1267,7 +1365,7 @@ export default {
     position: absolute;
     z-index: 5;
     width: 60vw;
-    top: 10vw;
+    top: 7vw;
     left: 19vw;
     opacity: 0.8;
   }
@@ -1288,35 +1386,35 @@ export default {
   }
   .home .home_1{
     left: 45.3vw;
-    top: 10vw;
+    top: 7vw;
   }
   .home .home_2{
     left: 54.2vw;
-    top: 13.6vw;
+    top: 10.6vw;
   }
   .home_3{
     left: 58.2vw;
-    top: 23.1vw;
+    top: 20.1vw;
   }
   .home .home_4{
     left: 54.1vw;
-    top: 32.2vw;
+    top: 29.2vw;
   }
   .home .home_5{
     left: 45.3vw;
-    top: 35.7vw;
+    top: 32.7vw;
   }
   .home .home_6{
     left: 36.2vw;
-    top: 13.7vw;
+    top: 10.7vw;
   }
   .home .home_7{
     left: 32.3vw;
-    top: 23vw;
+    top: 20vw;
   }
   .home .home_8{
     left: 36.2vw;
-    top: 32.2vw;
+    top: 29.2vw;
   }
 }
 
@@ -1390,7 +1488,7 @@ export default {
     width: 100vw;
     position: relative;
     background: #F1F1F1;
-    height: 155vw;
+    height: 175vw;
     p{
       display: inline-block;
       font-style: normal;

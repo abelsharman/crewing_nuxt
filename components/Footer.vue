@@ -10,9 +10,9 @@
             class="footer_mobile"
         >
             <a href="/"><img class="footer_mobile_2" src="../assets/loading.png" alt=""></a>
-            <p>Marine Personal & Consulting</p>
-            <img class="footer_mobile_1" style="margin-left:11vw" src="../assets/instagram.png" alt="">
-            <img class="footer_mobile_1" style="margin-left: 6vw;" src="../assets/telegram.png" alt="">
+            <p>Marine Personnel & Consulting</p>
+            <a href="https://www.instagram.com/crewingkz/"><img class="footer_mobile_1" style="margin-left:11vw" src="../assets/instagram.png" alt=""></a>
+            <a href="https://t.me/crewingkz"><img class="footer_mobile_1" style="margin-left: 6vw;" src="../assets/telegram.png" alt=""></a>
         </div>
     </div>    
 </template>

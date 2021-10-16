@@ -19,7 +19,7 @@
             <a v-if="!isMain" href="/?id=footer">Контакты</a>
             <a v-if="isMain" v-scroll-to="{el: '#footer'}">Контакты</a>
         </div>
-        <a class="header_tel" href="tel:+78633220190">+7 (863) 322 01 90</a>
+        <a class="header_tel" :href="'tel:'+phone" v-if="phone.length > 0">{{ phone }}</a>
 
         <span id="header_123" style="position:absolute;bottom:-20px;left:50vw;opacity:0;">a</span>
         <v-app-bar
@@ -30,7 +30,7 @@
             class="header_mobile"
         >
             <a href="/"><img class="header_mobile_img" :class="{ header_logo_scroll : !isMain }" :src="getImgUrl()" alt=""></a>
-            <p :style="[!isMain ? {color: '#173760'} : {color: '#173760'}]">Marine Personal & Consulting</p>
+            <p :style="[!isMain ? {color: '#173760'} : {color: '#173760'}]">Marine Personnel & Consulting</p>
             <v-app-bar-nav-icon large @click.stop="drawer = !drawer" style="margin-left: 30vw;margin-top:24px;" :style="[isMain ? {color: '#173760'} : {color: '#173760'}]"></v-app-bar-nav-icon>
         </v-app-bar>
 
@@ -75,9 +75,11 @@ export default {
         return {
             width: window.innerWidth,
             drawer: false,
+            phone: '',
         }
     },
     mounted(){
+        this.getData()
     },
     methods: {
         getImgUrl() {
@@ -90,7 +92,13 @@ export default {
                 pet = 'new_logo'
             }
             return images('./' + pet + ".png")
-        }
+        },
+        getData(){
+            this.$axios.get("https://periodicals.abelsharman.kz/crewingData")
+            .then((res)=>{
+                this.phone = res.data[0].phone
+            })
+        },
     },
     props: {
         isMain: Boolean
